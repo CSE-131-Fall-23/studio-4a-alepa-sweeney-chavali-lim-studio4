@@ -20,14 +20,19 @@ public class InterpretDrawingFile {
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
 		String n = in.next();
-		int k = in.nextInt();
+		int r = in.nextInt();
+		int g = in.nextInt();
+		int b = in.nextInt();
 		double x1 = in.nextDouble();
 		double y1 = in.nextDouble();
 		double x2 = in.nextDouble();
 		double y2 = in.nextDouble();
+		boolean l = in.nextBoolean();
 		
-		if(true) {
-			StdDraw.filledEllipse(x1, y1, x2, y2);
+		if(l = false ) {
+			StdDraw.setPenRadius(0.05);
+	        StdDraw.setPenColor(r, g, b);
+			StdDraw.ellipse(x1, y1, x2, y2);
 		}
 		
 	}
